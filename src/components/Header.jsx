@@ -1,9 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link, withRouter } from "react-router-dom";
 
 import FullMenu from "./FullHeightMenu";
+import gsap from "gsap";
 
 function Header({ history }) {
+  let logo = useRef(null);
+  let menu = useRef(null);
+  let header = useRef(null);
+
   // State for menu button
   const [state, setState] = useState({
     initial: false,
@@ -13,6 +18,19 @@ function Header({ history }) {
   const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
+  
+    if (state.clicked === false) {
+      logo.style.color = "#000000";
+      menu.style.color = "#000000";
+    } else if (
+      state.clicked === true ||
+      (state.clicked === true && state.initial === null)
+    ) {
+      logo.style.color = "#ffffff";
+      menu.style.color = "#ffffff";
+      menu.style.content = "close";
+      
+    }
     history.listen(() => {
       setState({ clicked: false, menuName: "Menu" });
     });
@@ -45,16 +63,22 @@ function Header({ history }) {
   };
 
   return (
-    <header>
+    <header ref={(el) => (header = el)}>
       <div className="container">
         <div className="wrapper">
           <div className="inner-header">
             <div className="logo">
-              <Link to="/">JCM</Link>
+              <Link ref={(el) => (logo = el)} to="/">
+                jesuscm.dev
+              </Link>
             </div>
             <div className="menu">
-              <button disabled={disabled} onClick={handleMenu}>
-                Menu
+              <button
+                ref={(el) => (menu = el)}
+                disabled={disabled}
+                onClick={handleMenu}
+              >
+                menu
               </button>
             </div>
           </div>

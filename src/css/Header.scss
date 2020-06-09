@@ -1,90 +1,48 @@
-// Import font
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-// Define colors
-$primary: #6baa75;
-$secondary: #84dd63;
-$light: #cbff4d;
-$dark: #545454;
-$alternative: #69747c;
-// Import media queries
-@import "./Media.scss";
-
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
-
-.container {
-  width: 1280px;
-  min-width: 1280px;
-  margin: 0 auto;
-  @include media("<=phone") {
-    width: 90%;
-    margin: 0 auto;
-  }
-  .wrapper {
-    padding: 0 48px;
-    @include media("<=phone") {
-      padding: 0 30px;
-    }
-    .home {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      height: 100%;
-      width: 100%;
-
-      h4 {
-        margin-top: 240px;
-        font-size: 1.8rem;
-        font-weight: 600;
-        padding-right: 360px;
-      }
-      p {
-        font-size: 1rem;
-        letter-spacing: 0.3rem;
-        text-transform: uppercase;
-        font-weight: 300;
-      }
-    }
-  }
-}
-
-// Styles for header
 header {
-  height: 120px;
+  height: 60px;
+  width: 100%;
+  background: $light;
+  position: absolute;
   @include media("<=phone") {
-    height: 98px;
+    height: 60px;
+    position: relative;
+    top: 0;
+    z-index: 1;
+    display: block;
   }
   .inner-header {
+    width: 100%;
     position: relative;
     z-index: 18;
-    height: 100px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include media("<=phone") {
+      height: 60px;
+    }
     .logo a {
-      font-weight: 900;
+      font-weight: 300;
       text-decoration: none;
       color: $dark;
+      font-size: 1.2rem;
       @include media("<=phone") {
-        font-size: 2.8em;
+        font-size: 1.2rem;
       }
     }
     .menu {
       button {
+        font-family: "Dosis";
+        font-weight: 300;
         border: none;
         background: none;
         outline: none;
         cursor: pointer;
         color: $dark;
-        font-size: 1rem;
+        font-size: 1.2rem;
         @include media("<=phone") {
-          font-size: 2.8em;
+          font-family: "Dosis";
+          font-size: 1.2rem;
         }
       }
     }
@@ -101,7 +59,7 @@ header {
     height: 100%;
     width: 100%;
     .menu-secondary-background-color {
-      background-color: $light;
+      background-color: $secondary;
       top: 0;
       bottom: 0;
       left: 0;
@@ -113,7 +71,7 @@ header {
     }
     .menu-layer {
       position: relative;
-      background: $alternative;
+      background: $primary;
       height: 100%;
       overflow: hidden;
       .menu-hobbies-background {
@@ -131,6 +89,10 @@ header {
       }
       .wrapper {
         position: relative;
+        padding-top: 80px;
+        @include media("<=phone") {
+          padding-top: 10px;
+        }
         .menu-links {
           display: flex;
           justify-content: space-between;
@@ -138,9 +100,17 @@ header {
           position: relative;
           top: 100px;
           width: 100%;
+          @include media("<=phone") {
+            display: block;
+            top: 90px;
+            justify-content: flex-end;
+          }
           nav {
             display: block;
             width: 60%;
+            @include media("<=phone") {
+              width: 100%;
+            }
             ul {
               padding: 0;
               margin: 0;
@@ -153,12 +123,17 @@ header {
                 overflow: hidden;
                 position: relative;
                 width: 50%;
+                @include media("<=phone") {
+                  width: 100%;
+                  font-size: 3rem;
+                  height: 80px;
+                }
                 a {
                   position: absolute;
                   color: #fff;
                   text-decoration: none;
                   &:hover {
-                    color: $dark;
+                    color: $alternative;
                   }
                 }
               }
@@ -167,12 +142,19 @@ header {
           .menu-info {
             width: 40%;
             color: #fff;
+            @include media("<=phone") {
+              width: 100%;
+            }
             h2 {
               font-size: 2rem;
               margin: 8px auto;
+              @include media("<=phone") {
+                font-size: 1.1rem;
+              }
             }
             p {
               margin: 0 auto;
+              padding: 10px 0;
               font-size: 1rem;
             }
           }
@@ -184,18 +166,30 @@ header {
           margin-top: 16px;
           font-size: 0.9rem;
           font-weight: 600;
+          @include media("<=phone") {
+            margin-top: 10px;
+          }
           span {
             &:first-child {
               margin-left: 64px;
+              @include media("<=phone") {
+                margin-left: 24px;
+              }
             }
             font-weight: 400;
             cursor: pointer;
             margin: 0 32px;
+            @include media("<=phone") {
+              margin: 0 8px;
+            }
             transition: 0.3s ease-in-out;
             &:hover {
               background: $dark;
               padding: 0 24px;
               border-radius: 4px;
+              @include media("<=phone") {
+                padding: 0 8px;
+              }
             }
           }
         }
@@ -203,19 +197,20 @@ header {
     }
   }
 }
+// Styles for header
 
 @keyframes cameraPan {
   0% {
     background-position: 0% 0%;
   }
   25% {
-    background-position: 60% 10%;
+    background-position: 40% 10%;
   }
   50% {
     background-position: 0% 10%;
   }
   75% {
-    background-position: 10% 60%;
+    background-position: 10% 40%;
   }
   100% {
     background-position: 0% 0%;

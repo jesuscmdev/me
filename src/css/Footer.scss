@@ -1,0 +1,24 @@
+.footer {
+  width: 100%;
+  height: 50px;
+  position: absolute;
+  display: block;
+  bottom: 0;
+  @include media("<=phone") {
+    position: relative;
+  }
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    .make-with-love {
+        &:hover{
+            color: $primary;
+        }
+    }
+    .social-links {
+      span {
+        padding: 0 10px;
+      }
+    }
+  }
+}

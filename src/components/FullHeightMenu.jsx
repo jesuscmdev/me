@@ -4,10 +4,12 @@ import gsap from "gsap";
 
 import hacking from "../images/hacks.webp";
 import starPuebla from "../images/rueda.webp";
+import lolPicture from "../images/tft.webp";
 
 const hobbies = [
   { name: "Hacking Time", image: hacking },
   { name: "Estrella Puebla", image: starPuebla },
+  { name: "LoL Time", image: lolPicture },
 ];
 
 function FullHeightMenu({ state }) {
@@ -153,7 +155,7 @@ function FullHeightMenu({ state }) {
                         ref={(el) => (linkOne = el)}
                         to="/about"
                       >
-                        About me
+                        Sobre mi
                       </Link>
                     </li>
                     <li>
@@ -173,18 +175,20 @@ function FullHeightMenu({ state }) {
                         ref={(el) => (linkThree = el)}
                         to="/contact"
                       >
-                        Contact
+                        Contacto
                       </Link>
                     </li>
                   </ul>
                 </nav>
                 <div ref={(el) => (infoMenu = el)} className="menu-info">
-                  <h2>This is my personal website</h2>
+                  <h2>Este es mi WebApp personal</h2>
                   <p>
-                    I'm yisus, I'm web developer, I'm in love with web
-                    technologies.
-                    <br />
-                    May be in this text block I'll show you the newest of me.
+                    Soy Yisus, Desarrollador Web, enamorado de las tecnologías
+                    web.
+                  </p>
+                  <p>
+                    Cada línea de código escrita, lleva el esfuerzo de horas,
+                    días y años de trabajo
                   </p>
                 </div>
                 <div className="hobbies">
