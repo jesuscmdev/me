@@ -3,8 +3,15 @@ import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
 function Home() {
+  let home = useRef(null);
   let contentHome = useRef(null);
   useEffect(() => {
+    gsap.from(home, {
+      duration: 0,
+      css: {
+        display: "block",
+      },
+    });
     gsap.from(contentHome, {
       duration: 3,
       y: 100,
@@ -13,11 +20,11 @@ function Home() {
     });
   });
   return (
-    <div className="container" ref={(el) => (contentHome = el)}>
-      <div className="home-page">
-        <div className="inner-home-page">
+    <div className="container">
+      <div className="home-page" ref={(el) => (home = el)}>
+        <div className="inner-home-page" ref={(el) => (contentHome = el)}>
           <div className="titulo">
-            <h2>Eat, Code, Sleep & Repeat</h2>
+            <h2>Code, Eat, Sleep & Repeat</h2>
           </div>
           <div className="titles">
             <div className="inner-titles">
@@ -34,10 +41,12 @@ function Home() {
                 Desarrollador Web.
               </p>
               <p>Me encantan las tecnologías web:</p>
-              <code>
-                React, Node JS, JavaScript, Mongo DB, Firebase, CMS, Headless
-                CMS, Graphql
-              </code>
+              <p>
+                <code>
+                  React, Node JS, JavaScript, Mongo DB, Firebase, CMS, Headless
+                  CMS, Graphql
+                </code>
+              </p>
               <p>
                 Esto es solo una pequeña muestra de mi trabajo. Próximamente más
                 proyectos.

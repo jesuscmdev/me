@@ -1,14 +1,39 @@
-import React from "react";
-
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
 function About() {
+  let titulo = useRef(null);
+  let bio = useRef(null);
+  let vtext = useRef(null);
+  useEffect(() => {
+    gsap.from(titulo, {
+      duration: 3,
+      x: -30,
+      opacity: 0,
+      ease: "power3.inOut",
+    });
+    gsap.from(bio, {
+      duration: 3,
+      x: -30,
+      opacity: 0,
+      ease: "power3.inOut",
+      delay: 1,
+    });
+    gsap.from(vtext, {
+      duration: 4,
+      x: 30,
+      opacity: 0,
+      ease: "power4.in",
+      delay: 2,
+    });
+  });
   return (
     <div className="container">
       <div className="about-section">
         <div className="about">
-          <div className="titulo">
+          <div className="titulo" ref={(el) => (titulo = el)}>
             <h2>Sobre mi</h2>
           </div>
-          <div className="bio">
+          <div className="bio" ref={(el) => (bio = el)}>
             <p>
               Soy Jesus Cortes Morales, Desarrollador Web.
               <br />
@@ -16,9 +41,14 @@ function About() {
               trabajo.
             </p>
             <p>
-              Actualmente trabajo para THK Marketing, principalmente
-              desarrollando sitios web. Tengo una gran pasión por <b>React</b> y
-              <b> JavaScript</b> pero también trabajo con PHP y WordPress.
+              Actualmente trabajo para{" "}
+              <a href="https://thkmarketing.mx" target="_blank">
+                {" "}
+                THK Marketing
+              </a>
+              , principalmente desarrollando sitios web. Tengo una gran pasión
+              por <b>React</b> y<b> JavaScript</b> pero también trabajo con PHP,
+              WordPress y otras tecnologías.
             </p>
             <p>
               Mi objetivo con esta web es documentar y compartir todo lo que
@@ -27,11 +57,11 @@ function About() {
               programar
             </p>
             <p>
-              Cuando no estoy codeando estoy jugando LOL, escuchando música,
+              Cuando no estoy codeando estoy jugando #LOL, escuchando música,
               estudiando o leyendo sobre nuevas tecnologías.
             </p>
           </div>
-          <div className="vertical-text">
+          <div className="vertical-text" ref={(el) => (vtext = el)}>
             <p>"Code, Eat, Sleep & Repeat"</p>
           </div>
         </div>
