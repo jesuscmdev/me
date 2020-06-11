@@ -2,7 +2,7 @@ header {
   height: 60px;
   width: 100%;
   background: $light;
-  position: absolute;
+  position: relative;
   @include media("<=phone") {
     height: 60px;
     position: relative;

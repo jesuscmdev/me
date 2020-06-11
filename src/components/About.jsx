@@ -6,20 +6,20 @@ function About() {
   let vtext = useRef(null);
   useEffect(() => {
     gsap.from(titulo, {
-      duration: 3,
+      duration: 2,
       x: -30,
       opacity: 0,
       ease: "power3.inOut",
     });
     gsap.from(bio, {
-      duration: 3,
+      duration: 2,
       x: -30,
       opacity: 0,
       ease: "power3.inOut",
       delay: 1,
     });
     gsap.from(vtext, {
-      duration: 4,
+      duration: 1,
       x: 30,
       opacity: 0,
       ease: "power4.in",
@@ -42,7 +42,11 @@ function About() {
             </p>
             <p>
               Actualmente trabajo para{" "}
-              <a href="https://thkmarketing.mx" target="_blank">
+              <a
+                href="https://thkmarketing.mx"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {" "}
                 THK Marketing
               </a>

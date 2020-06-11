@@ -2,12 +2,10 @@ import React, { useState, useEffect, useRef } from "react";
 import { Link, withRouter } from "react-router-dom";
 
 import FullMenu from "./FullHeightMenu";
-import gsap from "gsap";
 
 function Header({ history }) {
   let logo = useRef(null);
   let menu = useRef(null);
-  let header = useRef(null);
 
   // State for menu button
   const [state, setState] = useState({
@@ -18,7 +16,6 @@ function Header({ history }) {
   const [disabled, setDisabled] = useState(false);
 
   useEffect(() => {
-  
     if (state.clicked === false) {
       logo.style.color = "#000000";
       menu.style.color = "#000000";
@@ -29,7 +26,6 @@ function Header({ history }) {
       logo.style.color = "#ffffff";
       menu.style.color = "#ffffff";
       menu.style.content = "close";
-      
     }
     history.listen(() => {
       setState({ clicked: false, menuName: "Menu" });
@@ -63,7 +59,7 @@ function Header({ history }) {
   };
 
   return (
-    <header ref={(el) => (header = el)}>
+    <header>
       <div className="container">
         <div className="wrapper">
           <div className="inner-header">

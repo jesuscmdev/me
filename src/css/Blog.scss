@@ -1,7 +1,5 @@
 .blog-page {
-  height: 100vh;
-  display: flex;
-  align-items: center;
+  height: auto;
   .blog-item-container {
     display: flex;
     justify-content: flex-start;
@@ -11,7 +9,7 @@
     }
     .blog {
       margin: 0 10px;
-      padding: 10px;
+      padding: 30px 20px;
       border: 0px solid #ececec;
       width: 33%;
       display: flex;
@@ -28,6 +26,58 @@
         img {
           width: 100%;
           margin: 0 auto;
+        }
+      }
+      .body-blog {
+        .titulo-blog {
+          h4 {
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: $primary;
+            text-align: center;
+          }
+        }
+        .sinopsis {
+          color: #747474;
+        }
+      }
+      .footer-blog {
+        .inner-footer-blog {
+          .data-footer {
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-between;
+            .autor {
+              padding: 5px 0px;
+              color: $dark;
+              text-transform: uppercase;
+            }
+            .fecha-blog {
+              padding: 5px 10px;
+              background: $secondary;
+              color: $light;
+            }
+          }
+          .link-footer {
+            padding: 10px 0;
+            position: relative;
+            a {
+              padding-left: 30px;
+              text-decoration: none;
+              text-transform: uppercase;
+              color: $dark;
+              font-weight: 600;
+              &:after {
+                position: absolute;
+                content: "";
+                top: 50%;
+                left: 0px;
+                background-color: $dark;
+                width: 24px;
+                height: 2px;
+              }
+            }
+          }
         }
       }
     }

@@ -20,6 +20,11 @@ export default class Blog extends Component {
           return (
             <div className="blog-page">
               <div className="container">
+                <div className="titulo-blog-page">
+                  <div className="inner-titulo">
+                    <h2>Échale un ojo, algún post puede ayudarte</h2>
+                  </div>
+                </div>
                 <div className="blog-item-container">
                   {blogs.map((blog) => (
                     <div className="blog" key={blog.id}>

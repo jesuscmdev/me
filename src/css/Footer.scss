@@ -11,13 +11,28 @@
     display: flex;
     justify-content: space-between;
     .make-with-love {
-        &:hover{
-            color: $primary;
+      &:hover {
+        &:after {
+          position: absolute;
+          content: "";
+          left: -5px;
+          bottom: -15%;
+          width: 160px;
+          height: 2px;
+          background: $dark;
         }
+      }
     }
     .social-links {
-      span {
-        padding: 0 10px;
+      a {
+        text-decoration: none;
+        color: $dark;
+        padding: 5px 10px;
+        text-transform: uppercase;
+        &:hover {
+          background-color: $primary;
+          color: $light;
+        }
       }
     }
   }

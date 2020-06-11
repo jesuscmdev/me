@@ -19,9 +19,6 @@ function BlogItem(props) {
         <div className="inner-footer-blog">
           <div className="data-footer">
             <div className="autor">
-              <span>
-                <b>Wrote by </b>
-              </span>
               <span> {props.blog.autor} </span>
             </div>
             <div className="fecha-blog">
@@ -29,7 +26,7 @@ function BlogItem(props) {
             </div>
           </div>
           <div className="link-footer">
-            <Link to="/">Leer</Link>
+            <Link to="/">Leer más</Link>
           </div>
         </div>
       </div>

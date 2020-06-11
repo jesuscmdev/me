@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from "react";
 
-import gsap from "gsap";
+import { gsap } from "gsap";
 
 function Home() {
   let home = useRef(null);
   let contentHome = useRef(null);
+
   useEffect(() => {
     gsap.from(home, {
       duration: 0,

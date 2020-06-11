@@ -1,6 +1,6 @@
 .about-section {
   display: flex;
-  height: 100vh;
+  position: relative;
   align-items: center;
   @include media("<=phone") {
     height: auto;
@@ -33,7 +33,7 @@
   top: 50%;
   right: 0px;
   transform: rotate(-90deg);
-  z-index: 9;
+  z-index: 1;
   @include media("<=phone") {
     right: -80px;
   }
