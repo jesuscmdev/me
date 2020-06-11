@@ -1,0 +1,35 @@
+.blog-page {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  .blog-item-container {
+    display: flex;
+    justify-content: flex-start;
+
+    @include media("<=phone") {
+      display: block;
+    }
+    .blog {
+      margin: 0 10px;
+      padding: 10px;
+      border: 0px solid #ececec;
+      width: 33%;
+      display: flex;
+      box-sizing: border-box;
+      box-shadow: 1px 2px 4px #ececec;
+      &:hover {
+        box-shadow: 6px 8px 12px 5px #ececec;
+      }
+      @include media("<=phone") {
+        width: 100%;
+      }
+      .imagen-cover {
+        width: 100%;
+        img {
+          width: 100%;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

@@ -18,11 +18,11 @@ export default class Blog extends Component {
           if (error) return <div>Error al cargar los blogs</div>;
           const blogs = data.blogs;
           return (
-            <div className="section blog-page">
+            <div className="blog-page">
               <div className="container">
                 <div className="blog-item-container">
                   {blogs.map((blog) => (
-                    <div className="column is-one-third" key={blog.id}>
+                    <div className="blog" key={blog.id}>
                       <BlogI blog={blog} />
                     </div>
                   ))}
