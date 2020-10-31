@@ -26,6 +26,7 @@ function Home() {
         <div className="inner-home-page" ref={(el) => (contentHome = el)}>
           <div className="titulo">
             <h2>Code, Eat, Sleep & Repeat</h2>
+
           </div>
           <div className="titles">
             <div className="inner-titles">
