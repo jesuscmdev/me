@@ -35,34 +35,26 @@ function About() {
           </div>
           <div className="bio" ref={(el) => (bio = el)}>
             <p>
-              Soy Jesus Cortes Morales, Desarrollador Web.
-              <br />
-              Me encanta codear y tengo la fortuna de hacer esto como mi
-              trabajo.
+              ¡Hola, soy "Yisus", apasionado por el Desarrollo Web con la
+              fortuna. Actualmente, formo parte del equipo de desarrollo en{" "}
+              <b>Sparklabs</b>.
             </p>
             <p>
-              Actualmente trabajo para{" "}
-              <a
-                href="https://thkmarketing.mx"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {" "}
-                THK Marketing
-              </a>
-              , principalmente desarrollando sitios web. Tengo una gran pasión
-              por <b>React</b> y<b> JavaScript</b> pero también trabajo con PHP,
-              WordPress y otras tecnologías.
+              Mi corazón late fuerte por <b>React</b> (Next JS) y{" "}
+              <b>JavaScript</b>, pero también domino el mundo del backend
+              utilizando PHP, siendo <b>Laravel</b> mi framework principal, y
+              poseo habilidades avanzadas en <b>WordPress</b>.
             </p>
             <p>
-              Mi objetivo con esta web es documentar y compartir todo lo que
-              aprenda a lo largo de mi carrera, para orientar a desarrolladores
-              que como yo en su momento se encuentran con dudas y errores al
-              programar
+              Además de programar, disfruto explorando la infraestructura en la
+              nube, con un enfoque especial en <b>AWS</b>. He tenido
+              experiencias emocionantes y limitadas con <b>Docker</b>, ¡ que me
+              ha fascinado cada momento!
             </p>
             <p>
-              Cuando no estoy codeando estoy jugando #LOL, escuchando música,
-              estudiando o leyendo sobre nuevas tecnologías.
+              Cuando no estoy inmerso en el código, me encontrarás sumergido en
+              partidas de #LOL o #Valorant, disfrutando de buena música o
+              pedaleando por los cerritos con mi bicicleta.
             </p>
           </div>
           <div className="vertical-text" ref={(el) => (vtext = el)}>

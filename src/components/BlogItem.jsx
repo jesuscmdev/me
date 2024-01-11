@@ -26,7 +26,7 @@ function BlogItem(props) {
             </div>
           </div>
           <div className="link-footer">
-            <Link to="/">Leer más</Link>
+            <Link to="#">Leer más</Link>
           </div>
         </div>
       </div>

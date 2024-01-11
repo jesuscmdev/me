@@ -22,7 +22,11 @@ export default class Blog extends Component {
               <div className="container">
                 <div className="titulo-blog-page">
                   <div className="inner-titulo">
-                    <h2>Échale un ojo, algún post puede ayudarte</h2>
+                    <h2>Algunas cosas que aplico en el día a día</h2>
+                    <p>
+                      Ups!... no he podido continuar con este apartado, pero
+                      espero pronto poder tenerlo listo
+                    </p>
                   </div>
                 </div>
                 <div className="blog-item-container">
