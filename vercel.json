@@ -1,0 +1,8 @@
+{
+   "version": 1,
+   "builds": [
+      {
+         "use": "@vercel/node@18"
+      }
+   ]
+}
